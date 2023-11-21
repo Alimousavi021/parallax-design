@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+
+@keyframes vid {
+    0% {
+        transform: scale(.1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.vid-anim {
+    animation: vid 2s ease-in-out forwards;
+}
+
+@keyframes khat {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    50% {
+        width: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+.khat-anim {
+    animation: khat 5s ease-in-out forwards;
+}
+
+@keyframes h {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    20% {}
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-20px);
+        transform: translateY(-20px);
+
+    }
+}
+
+.h-anime {
+    animation: h 4s ease-in-out forwards;
+}
+
+@keyframes p {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    20% {}
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.p-anime {
+    animation: p 4s ease-in-out forwards;
+}
+
+@keyframes logo {
+    0% {
+        transform: translate(500px, 500px) scale(5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(200px, 200px) scale(2.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0) scale(1);
+    }
+}
+
+.logo-anim {
+    animation: logo 5s ease-in-out forwards;
+}
+
+/* @font-face {
+    font-family: iran;
+    src: url();
+} */
+
+.hamburgler {
+    width: 20px;
+    height: 20px;
+    display: block;
+    transition: .3s ease all;
+
+    &.no-hamburgler {
+        transform: rotate(-45deg);
+    }
+}
+
+.bun,
+.meat {
+    display: block;
+    width: 100%;
+    background: white;
+    height: 20%;
+    transition: .3s ease all;
+    border-radius: 50px;
+}
+
+.top {
+    .no-hamburgler & {
+        height: 38%;
+        width: 20%;
+        margin-left: 40%;
+        border-radius: 50px 50px 0 0;
+    }
+}
+
+.bottom {
+    .no-hamburgler & {
+        height: 38%;
+        width: 20%;
+        margin-left: 40%;
+        border-radius: 0 0 50px 50px;
+    }
+}
+
+.meat {
+    margin: 20% 0;
+
+    .no-hamburgler & {
+        margin: 2% 0;
+
+    }
+}
+
+.op {
+    opacity: 0;
+}
+
+.font-khat {
+    font-family: 'Dancing Script', cursive;
+}
